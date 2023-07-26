@@ -1,0 +1,32 @@
+in this code, since input is in str form, we change it into float for better comparition.
+Than, we compare each element with other users calendar, detect overlapings, find starttime
+and endtime, then we return it. 
+The conditions of overlaping can be the tricky part here since it is a bit logic involved:
+
+here is the logic : (start1 <= start2 and end1 > start2) or (start1 < end2 and end1 >= end2) or (start1 >= start2 and end1 <= end2)
+
+we have 3 conditions:
+1-start of the first time being equal or smaller than second start time, and end of the first time being bigger than start of second time
+
+start1: 10:00
+end1: 11:30
+start2: 11:00 (Second interval starts within the first interval)
+Result: Overlapping interval starts at 11:00.
+
+2-start of the first time being smaller than end of the second time and end of the first time being bigger or equal than second times end
+
+start1: 12:15 (Second interval ends within the first interval)
+end1: 13:30
+start2: 12:00 
+end2: 13:00
+Result: Overlapping interval ends at 13:00.
+
+3-start of the first time being bigger or equal  to start of second time and end of first time being small or equal to end of second time
+
+start1: 14:20
+end1: 16:30
+start2: 14:00
+end2: 17:00
+Result: Overlapping interval starts at 14:20 and ends at 16:30.
+
+After finding every overlap, we reformat it to be a string and return it.

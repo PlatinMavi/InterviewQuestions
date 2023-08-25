@@ -1,4 +1,5 @@
 # Source: https://youtu.be/3Q_oYDQ2whs
+# Company: Google
 # Question: 2 persons calender is given, and their working hours.
 # Search thru 2 persons calender and find available hours for 2 person to have a meeting.
 
